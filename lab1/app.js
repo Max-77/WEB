@@ -1,20 +1,13 @@
 const express = require ("express");
 const port = 3000;
 const app =express();
-
+const style = "border: 1px solid red; padding: 0 10px";
 const mainURL = "/api/PushkinMaxim/lab1/";
 const functions = require("./Tasks 16, 3, 13");
-
+// Переверстать страницу чтобы каждая надпись была в квадрате и ссылка кликабельная
 app.get('/', function(request, response){
     console.log(`URL: ${request.url}`);
-    response.send('<h1>' + 'Hello, there is a hint for you' + '</h1><br>' +
-        '<h2>' + 'Use ' + '<i>' + mainURL + 'function?key=value[&key2=value2]' + '</i></h2><br>' +
-        'ex.3 Use ' + '<i><b>' + mainURL + 'generateColor?type=hex' + '</b></i><br>' +
-        '<p>' + 'Generates random color in HEX, example: #123456' + '</p><br><br>' +
-        'ex. 13 Use ' + '<i><b>' + mainURL + 'format?number=n&count=c' + '</b></i><br>' +
-        '<p>' + 'Formatting number to count letters after point' + '</p><br><br>' +
-        'ex. 16 Use ' + '<i><b>' + mainURL + 'checkDomain?domain=url' + '</b></i><br>' +
-        '<p>' + 'Checks could string be a domain or not' + '</p>');
+    response.sendFile(__dirname + "/index.html");
 });
 
 app.get(mainURL+'generateColor', function (request, response){
@@ -37,8 +30,7 @@ app.get(mainURL + 'format', function(request, response){
         response.send('Wrong value of parameter');
         return;
     }
-    response.send(number + ' formated to ' + count + ' signs after point is: ' +
-    functions.format(number, count));
+    response.send(number + ' formated to ' + count + ' signs after point is: ' +    functions.format(number, count));
 
 
 });
