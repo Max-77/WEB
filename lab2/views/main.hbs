@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>{{ tittle }}</title>
+    <meta charset="utf-8" />
+</head>
+<style>
+.content{
+    text-align: center;
+    margin-top: 17%;
+    background-color: {{backColor}};
+    font-size: 300%
+}
+</style>
+<body>
+{{>menu}}
+
+<div class="content">
+{{ content }}
+</div>
+
+{{>footer}}
+</body>
+<html>

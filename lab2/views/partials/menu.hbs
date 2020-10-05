@@ -1,0 +1,105 @@
+<style>
+    nav {
+        background-color: #6495ed;
+        align-content: center;
+        text-align: center;
+        font-size: larger;
+    }
+
+    nav ul {
+        padding:0;
+        margin:0;
+        list-style: none;
+        position: relative;
+    }
+
+    nav ul li {
+        margin: 0;
+        display:inline-block;
+        background-color: #6495ed;
+        width: 20%;
+    }
+
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        width: 20%;
+    }
+
+    nav ul li:hover > ul{
+        display:list-item;
+        position: absolute;
+        top: 100%;
+        width: 20%;
+    }
+
+    nav ul ul li {
+        float:none;
+        display:list-item;
+        position: relative;
+        margin:0;
+        padding: 0;
+        width: 100%;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: white;
+        color: black;
+        text-decoration: white;
+        text-decoration: underline;
+    }
+    a:visited{
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+<nav>
+<ul>
+    <li>
+        <a href = "http://localhost:3001/">
+        Главная страница
+        </a>
+    </li>
+
+    <li>
+        <a href = "">
+        Сгенерировать цвет
+        </a>
+            <ul>
+        <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/inputColorData">
+            Задать параметры</a></li>
+        <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/generateColor">
+            Получить результат</a></li>
+            </ul>
+    </li>
+
+    <li>
+        <a href = "">
+            Отформатировать число
+        </a>
+        <ul>
+            <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/inputFormatData">
+                Задать параметры</a></li>
+            <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/format">
+                Получить результат</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href = "">
+        Проверить домен
+        </a>
+        <ul>
+            <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/inputDomainData">
+                Задать параметры</a></li>
+            <li><a href = "http://localhost:3001/api/PushkinMaxim/lab1/checkDomain">
+                Получить результат</a></li>
+        </ul>
+    </li>
+</ul>
+</nav>
