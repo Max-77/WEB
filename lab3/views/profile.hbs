@@ -1,0 +1,16 @@
+{{>head}}
+<style>
+    {{>content}}
+</style>
+<body>
+{{>menu}}
+
+<div class="content">
+    <form action={{action}} method="POST">
+        {{ content }} <button type="submit"> Logout </button>
+    </form>
+</div>
+
+{{>footer}}
+</body>
+</html>

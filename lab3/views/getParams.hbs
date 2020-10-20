@@ -1,0 +1,20 @@
+{{>head}}
+<style>
+{{>content}}
+</style>
+<body>
+{{>menu}}
+
+<div class="content">
+    {{mainPhrase}}
+    <form method="get" action={{action}}>
+    {{#each parameters}}
+    <input type = "text" name={{this}}  placeholder="Input {{this}}" />
+    {{/each}}
+    <input type = "submit">
+    </form>
+</div>
+
+{{>footer}}
+</body>
+<html>

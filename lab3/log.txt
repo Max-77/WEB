@@ -1,0 +1,9 @@
+404 Not found GET /views/favicon.ico
+401 Unauthorized GET /profile
+401 Unauthorized GET /api/PushkinMaxim/lab1/inputDomainData
+401 Unauthorized GET /api/PushkinMaxim/lab1/inputFormatData
+401 Unauthorized GET /api/PushkinMaxim/lab1/inputColorData
+User with such username already exist POST /register
+Incorrect username or password POST /login
+401 Unauthorized GET /api/PushkinMaxim/lab1/inputDomainData
+401 Unauthorized GET /api/PushkinMaxim/lab1/inputColorData
