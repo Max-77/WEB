@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=lab4_db
+    container_name: my_database
+  web:
+    image: web/lab4
+    command: npm run all
+    depends_on:
+      - db
+    ports:
+    - "3000:3000"

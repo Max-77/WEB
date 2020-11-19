@@ -1,0 +1,21 @@
+{{>head}}
+<style>
+        {{>contentRegistration}}
+</style>
+<body>
+{{>menu}}
+<div class = "contentRegistration">
+    <form action={{action}} method="POST">
+        <label for="username"> Username:
+            <input type="text" name="username" placeholder="Input your login">
+        </label> <br/>
+        <label for="password"> Password:
+            <input type="password" name="password" placeholder="Input your password">
+        </label> <br/>
+        <input type="submit" value="Register"/>
+    </form>
+</div>
+<div style="background-color: red; text-align: center; font-size: 150%; margin-top: 5%" >{{message}}</div>
+{{>footer}}
+</body>
+</html>

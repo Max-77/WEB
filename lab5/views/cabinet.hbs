@@ -1,0 +1,18 @@
+{{>head}}
+<style>
+        {{>content}}
+</style>
+<body>
+{{>menu}}
+
+<div class="content">
+    {{ content }}
+    <form method="get" action="/show"><input type="submit" value="Look data"/></form>
+    <form method="get" action="/edit"><input type="submit" value="Change data"/></form>
+    <form method="post" action="/logout"><input type = "submit" value="Logout"/></form>
+</div>
+
+
+{{>footer}}
+</body>
+<html>
